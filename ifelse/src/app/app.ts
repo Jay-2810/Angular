@@ -18,7 +18,7 @@ export class App {
   toggleTextMethod(){
     this.toggleText = !this.toggleText;
   }
-  color='red';
+  color='';
   handleColor(val:string){
     this.color=val
   }
