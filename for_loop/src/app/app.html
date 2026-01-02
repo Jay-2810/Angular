@@ -1,0 +1,58 @@
+<!-- <h1>For loop</h1>
+
+@for(user of users; track user){
+  <h3>{{user}}</h3>
+}
+<hr>
+@for(student of students; track student.name; let i = $index){
+  <h3>
+    <span>{{i+1}}:</span>
+    <span style="color: blueviolet;">{{student.name}}</span>
+    <span style="color: rgb(167, 38, 120);"> - {{student.age}}</span>
+    <span> - {{student.email}} </span>
+    <button (click)="getName(student.name)">Get Name</button>
+  </h3>
+} -->
+
+
+<h1>Basics of signals</h1>
+
+<h2>{{x}}</h2>
+<h2>{{count()}}</h2>
+
+<br>
+<br>
+<button (click)="updateValue()">Update value</button>
+<hr>
+<!-- we can handle increment and decrement using single function -->
+<div style="display: flex; gap: 20px; align-items: center;">
+  <button (click)="trackVal('inc')">Increment</button> 
+  <h3>{{count()}}</h3>
+  <button (click)="trackVal('dec')">Decrement</button>
+</div>
+
+<!-- we can handle increment and decrement direct in button click -->
+<!-- <div style="display: flex; gap: 20px; align-items: center;">
+  <button (click)="this.count.set(this.count()+1)">Increment</button> 
+  <h3>{{count()}}</h3>
+  <button (click)="this.count.set(this.count()-1)">Decrement</button>
+</div> -->
+
+<h3>{{data()}}</h3>
+<h3>{{data1()}}</h3>
+<button (click)="updateData()">Update Data</button>
+
+<hr>
+
+<h1>Computed Signals</h1>
+
+<h3>{{z()}}</h3>
+<button (click)="showValue()">show value</button>
+
+<!-- Contructor and Effects -->
+ <h1>Effects</h1>
+ <h3>{{k()}}</h3>
+ @if(display()){
+  <h2 style="background-color: purple;color: white; border-radius: 20px; text-align: center;">My name is Jay.</h2>
+ }
+  <button (click)="update_k()">increment</button>
