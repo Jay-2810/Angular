@@ -1,0 +1,51 @@
+<!-- <h1>If Else Control flow</h1>
+
+<button (click)="toggle()">Toggle</button>
+<br>
+<br>
+@if(display){
+  <div style="width: 100px; height: 100px; background-color: blueviolet;"></div>
+}
+@else {
+  <div style="width: 100px; height: 100px; background-color: coral;"></div>
+}
+
+<hr>
+
+<button (click)="toggleTextMethod()">{{toggleText ? 'Hide' : 'Show'}}</button>
+
+@if(toggleText){
+  <h3>This text is shown using if else control flow.</h3>
+}
+@else {
+  <h3>The text is hidden now.</h3>
+} -->
+
+<h1>Else If Control Flow</h1>
+  
+<button class="pink-button" (click)="handleColor('Pink')">Pink</button>
+<button class="purple-button" (click)="handleColor('Purple')">Purple</button>
+<button class="red-button" (click)="handleColor('Red')">Red</button>
+<button class="green-button" (click)="handleColor('Green')">Green</button>
+<button class="white-button" (click)="handleColor('White')">Other</button>
+<br>
+<br>
+<input type="text" (input)="handleInput($event)" placeholder="Enter Color Name" />
+<br>
+<br>
+
+@if(color == 'Pink'){
+  <div style="width: 100px; height: 100px; background-color: pink;"></div>
+}
+@else if (color=='Purple') {
+  <div style="width: 100px; height: 100px; background-color: purple;"></div>
+}
+@else if (color=='Red') {
+  <div style="width: 100px; height: 100px; background-color: red;"></div>
+}
+@else if (color=='Green') {
+  <div style="width: 100px; height: 100px; background-color: green;"></div>
+}
+@else{
+  <div style="width: 100px; height: 100px; background-color: white;"></div>
+}

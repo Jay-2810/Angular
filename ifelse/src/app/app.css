@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+    color: white;
+}
+
+.red-button {
+    width: 50px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    margin-right: 20px;
+}
+.blue-button {
+    width: 50px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    margin-right: 20px;
+}
+.purple-button {
+    width: 50px;
+    height: 30px;
+    background-color: purple;
+    color: white;
+    margin-right: 20px;
+}
+.white-button {
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    margin-right: 20px;
+}
+.pink-button {
+    width: 50px;
+    height: 30px;
+    background-color: #ff0099;
+    color: white;
+    margin-right: 20px;
+}
+.green-button {
+    width: 50px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    margin-right: 20px;
+}
+
+.gray-button {
+    width: 60px;
+    height: 30px;
+    background-color: gray;
+    color: black;
+    margin: auto;
+}
