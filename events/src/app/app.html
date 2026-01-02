@@ -1,9 +1,34 @@
-<h1>Events in Angular</h1>
+<!-- All Events -->
 
-<button class="btn" name="login" (click)="handleEvent($event)">Click Here</button>
+<!-- <h1>Events in Angular</h1> -->
+
+<!-- <button class="btn" name="login" (click)="handleEvent($event)">Click Here</button>
 <br>
 <div (mouseenter)="handleEvent($event)" name="purple" style="background-color: purple; width: 100px; height: 100px; margin-top: 20px; border: 2px solid black;"></div>
 <div (mouseleave)="handleEvent($event)" name="green" style="background-color: darkgreen; width: 100px; height: 100px; margin-top: 20px; border: 2px solid black;"></div>
 
 <br>
-<input (focus)="handleEvent($event)" (blur)="handleEvent($event)" type="text" name="textInput" (input)="handleEventInput($event)" placeholder="Type something here..." />
+<input (focus)="handleEvent($event)" (blur)="handleEvent($event)" type="text" name="textInput" (input)="handleEventInput($event)" placeholder="Type something here..." /> -->
+
+<!-- GET and SET value of input field -->
+<h1>GET and SET input values</h1>
+<!-- By using below format we can display name in realtime -->
+<h2>User name is : {{name}}</h2>
+
+<!-- By using below format we can display name after he/she clicks on GET value -->
+ <h2>User name is : {{displayName}}</h2>
+<input type="text" value={{name}} (input)="getName($event)" placeholder="Type something here..." />
+<br>
+<br>
+<button (click)="showName()">Get Name</button> 
+<button (click)="setName()">Set Name</button> 
+<hr>
+
+<h2>User Email is : {{email}}</h2>
+
+<h2>User Email is : {{displayEmail}}</h2>
+<input type="text" value={{email}} (input)="getEmail($event)" placeholder="Enter email..." #emailField />
+<br>
+<br>
+<button (click)="showEmail()">Get Mail</button> 
+<button (click)="setEmail()">Set Email</button> 
