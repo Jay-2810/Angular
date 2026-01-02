@@ -1,0 +1,16 @@
+<body class="container">
+  <h1 class="title">Counter App</h1>
+  <div style="text-align: center;">
+    <h2 class="count">{{count}}</h2>
+    <!-- <div>
+      <button (click)="decre()" class="btn bg-red">Decrement</button>
+      <button (click)="reset()" class="btn bg-black">Reset</button>
+      <button (click)="incre()" class="btn bg-green">Increment</button>
+    </div> -->
+    <div>
+      <button (click)="handleCounter('minus')" class="btn bg-red">Decrement</button>
+      <button (click)="handleCounter('')" class="btn bg-black">Reset</button>
+      <button (click)="handleCounter('plus')" class="btn bg-green">Increment</button>
+    </div>
+  </div>
+</body>
