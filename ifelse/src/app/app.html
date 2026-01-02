@@ -21,7 +21,7 @@
   <h3>The text is hidden now.</h3>
 } -->
 
-<h1>Else If Control Flow</h1>
+<!-- <h1>Else If Control Flow</h1>
   
 <button class="pink-button" (click)="handleColor('Pink')">Pink</button>
 <button class="purple-button" (click)="handleColor('Purple')">Purple</button>
@@ -34,18 +34,47 @@
 <br>
 <br>
 
-@if(color == 'Pink'){
+@if(color == 'pink'){
   <div style="width: 100px; height: 100px; background-color: pink;"></div>
 }
-@else if (color=='Purple') {
+@else if (color=='purple') {
   <div style="width: 100px; height: 100px; background-color: purple;"></div>
 }
-@else if (color=='Red') {
+@else if (color=='red') {
   <div style="width: 100px; height: 100px; background-color: red;"></div>
 }
-@else if (color=='Green') {
+@else if (color=='green') {
   <div style="width: 100px; height: 100px; background-color: green;"></div>
 }
 @else{
   <div style="width: 100px; height: 100px; background-color: white;"></div>
+} -->
+
+<h1>Switch Case Control Flow</h1>
+
+<button class="pink-button" (click)="handleColor('pink')">Pink</button>
+<button class="purple-button" (click)="handleColor('purple')">Purple</button>
+<button class="red-button" (click)="handleColor('red')">Red</button>
+<button class="green-button" (click)="handleColor('green')">Green</button>
+<button class="white-button" (click)="handleColor('white')">Other</button>
+<br>
+<br>
+<input type="text" (input)="handleInput($event)" placeholder="Enter Color Name" />
+<br>
+@switch (color) {
+  @case('pink'){
+    <h1 style="background-color: palevioletred;">Pink Color</h1>
+  }
+  @case('purple'){
+    <h1 style="background-color: rebeccapurple; color: white;">Purple Color</h1>
+  }
+  @case('red'){
+    <h1 style="background-color: crimson; color: white;">Red Color</h1>
+  }
+  @case('green'){
+    <h1 style="background-color: forestgreen; color: white;">Green Color</h1>
+  }
+  @default {
+    <h1 style="background-color: black;color: #fff;">No color match</h1>
+  }
 }
