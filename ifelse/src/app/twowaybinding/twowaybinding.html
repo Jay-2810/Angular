@@ -1,0 +1,7 @@
+<h1 style="text-align: left; color: wheat;">Two Way Binding</h1>
+
+<input type="text" [(ngModel)]="name" placeholder="Enter Your Name">
+<h1>Name : {{name}}</h1>
+
+<input type=" text" (input)="handleInput($event)" placeholder="Enter Your Surname">
+<h1>Surname : {{surname}}</h1>
