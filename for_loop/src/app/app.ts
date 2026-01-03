@@ -1,10 +1,11 @@
 import { Component, signal, effect, WritableSignal, computed, Signal } from '@angular/core';
 import { email } from '@angular/forms/signals';
 import { RouterOutlet } from '@angular/router';
+import { Contextual } from './contextual/contextual';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Contextual],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

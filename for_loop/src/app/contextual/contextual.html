@@ -1,0 +1,20 @@
+<p>contextual works!</p>
+
+<!-- Here $count and items.length are used to show total count -->
+@for(item of items; track item; let i=$index){
+    @if($first){
+        <h3>Total items are {{$count}} or {{items.length}}</h3>
+    }
+    @if($even){
+        <h4 style="background-color: lightgray;">{{i}}. {{item}} (even)</h4>
+    } @else {
+        <h4 style="background-color: darkgrey;">{{i}}. {{item}} (odd)</h4>
+    }
+    @if($last){
+        <h3>End of the list. Total items are {{$count}} or {{items.length}}</h3>
+    }
+    <!-- <h4>{{i}}. {{item}}</h4> -->
+}
+@empty{
+    <h3>No items found.</h3>
+}
