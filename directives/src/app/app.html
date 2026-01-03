@@ -1,0 +1,33 @@
+<h1 *ngIf="show">Hello!!! How are you??</h1>
+<button (click)="show = !show">Toggle</button>
+
+<hr>
+
+<ul>
+  <li *ngFor="let student of students">{{student}}</li>
+</ul>
+
+<hr>
+
+<ul>
+  <li *ngFor="let student of studentsData">
+    Name: {{student.name}}, Age: {{student.age}}, Email: {{student.email}}
+  </li>
+</ul>
+
+<hr>
+<div *ngFor="let student of studentsData">
+  <h3>{{student.name}}</h3>
+  <ul>
+    <li *ngFor="let subject of student.subjects">{{subject}}</li>
+  </ul>
+</div>
+<hr>
+<div *ngFor="let order of orders">
+   <h3>Oreder ID : {{order.orderId}}</h3>
+   <ul>
+    <li *ngFor="let item of order.items">
+      Item Name: {{item.name}}, Quantity: {{item.quantity}}, Price: {{item.price}}
+    </li>
+   </ul>
+</div>
