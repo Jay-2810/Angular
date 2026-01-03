@@ -1,0 +1,22 @@
+<h1>*ngifelse works fine</h1>
+
+<div *ngIf="loginStatus; else elseBlock">
+    <a href="http://">Logout</a>
+</div>
+<ng-template #elseBlock>
+    <a href="http://">Login</a>
+</ng-template>
+
+<div *ngIf="block==0">
+    <h3>Block is 0</h3>
+</div>
+<div *ngIf="block==1">
+    <h3>Block is 1</h3>
+</div>
+<div *ngIf="block==2">
+    <h3>Block is 2</h3>
+</div>
+<div *ngIf="block==3">
+    <h3>Block is 3</h3>
+</div>
+<button (click)="updateBlock()">Update Block</button>

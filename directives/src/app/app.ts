@@ -2,10 +2,12 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor, NgIf } from "@angular/common";
 import { email } from '@angular/forms/signals';
+import { Ngifelse } from './ngifelse/ngifelse';
+import { Ngswitchcase } from './ngswitchcase/ngswitchcase';
 
 @Component({
   selector: 'app-root',
-  imports: [NgIf,NgFor],
+  imports: [NgIf,NgFor,Ngifelse,Ngswitchcase],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
