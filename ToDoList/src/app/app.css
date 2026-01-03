@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+    background-color: purple;
+    color: wheat;
+}
+.input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 38%;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+button{
+    height: 36px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: purple;
+    color: wheat;
+    /* border: none; */
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 15px;
+    color: rgb(142, 9, 115);
+}

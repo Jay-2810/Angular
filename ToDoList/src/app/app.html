@@ -1,0 +1,21 @@
+<h1>Add Your Tasks</h1>
+<br>
+
+<input type="text" class="input" [(ngModel)]="task" placeholder="Enter Your Task">
+<button class="btn" (click)="addTask()">Add Task</button>
+
+<br>
+<hr style="border: 1px solid purple;">
+@for(t of taskList; track t.id; let i = $index) {
+  <div class="task">
+    <!-- <input type="checkbox" (change)="toggleTask(t.id)" [checked]="t.completed"> -->
+    <ul class="list">
+      <li>{{t.id}}</li>
+      <li>{{t.task}}</li>
+      <li><button (click)="removeTask(t.id)">remove</button></li>
+    </ul>
+  </div>
+}
+@empty {
+  <h3 style="color: rgb(142, 9, 115); padding: 20px;"> <li>No Tasks yet added.</li></h3>
+}
