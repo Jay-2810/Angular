@@ -1,0 +1,15 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+}
+
+button{
+    width: 60px;
+    margin-right: 10px;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}
