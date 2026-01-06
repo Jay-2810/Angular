@@ -1,0 +1,20 @@
+<!-- <h1>Pass data from parent to Child component</h1>
+
+<app-user [user]="userName" city="Surat"></app-user>
+
+<select (change)="onChangeUser($event)">
+  <option value="">Select User</option>
+  <option value="Jay">Jay</option>
+  <option value="Smit">Smit</option>
+  <option value="Yash">Yash</option>
+  <option value="Keyur">Keyur</option>
+</select> -->
+
+<!-- <hr color="black"> -->
+
+<h1>Reuse Component</h1>
+@for(user of users;track user){
+  <div>
+    <app-user [user]="user"></app-user>
+  </div>
+}
