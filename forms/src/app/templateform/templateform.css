@@ -1,0 +1,17 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+}
+div{
+    display: flex;
+}
+button{
+    width: 75px;
+    margin-right: 10px;
+}
+span{
+    color: red;
+    font-size: 12px;
+}
