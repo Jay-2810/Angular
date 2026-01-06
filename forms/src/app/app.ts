@@ -5,7 +5,7 @@ import { Templateform } from './templateform/templateform';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Reactiveform,Templateform],
+  imports: [Reactiveform,Templateform],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
