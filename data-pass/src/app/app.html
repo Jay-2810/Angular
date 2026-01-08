@@ -12,9 +12,18 @@
 
 <!-- <hr color="black"> -->
 
-<h1>Reuse Component</h1>
+<!-- <h1>Reuse Component</h1>
 @for(user of users;track user){
   <div>
     <app-user [user]="user"></app-user>
   </div>
+} -->
+
+<h1>Pass data from child to parent</h1>
+<app-child (getChildren)="handleChild($event)"></app-child>
+
+<!-- Direct list print -->
+@for(child of children;track child)
+{
+  <h2>{{child}}</h2>
 }
