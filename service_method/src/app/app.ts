@@ -20,4 +20,11 @@ export class App {
     this.data=this.productService.sendData();
     console.log(this.data);
   }
+  productList:any;
+  ngOnInit(){
+    this.productService.getApi().subscribe((data:any)=>{
+      console.log(data);
+      this.productList=data.products;
+    })
+  }
 }
