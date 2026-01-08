@@ -7,6 +7,8 @@
   <h3>{{item.name}}-{{item.company}}-{{item.price}}</h3>
 } -->
 
+
+<!-- Call predefine API -->
 @for(product of productList;track product.id)
 {
   <ul>
@@ -17,3 +19,6 @@
     <li><img src="{{product.thumbnail}}" alt=""></li>
   </ul>
 }
+
+<!-- Call custom API -->
+ <app-custom-api></app-custom-api>

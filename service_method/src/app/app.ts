@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Product} from './services/product'
+import { CustomAPI } from './custom-api/custom-api';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [CustomAPI],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
