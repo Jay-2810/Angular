@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CurrencyConverterPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: number, ...args: number[]): number {
+    if(args.length!=0)
+    {
+      let [data]=args;
+      return value*data;
+    }else{
+      return value*90;
+    }
   }
 
 }

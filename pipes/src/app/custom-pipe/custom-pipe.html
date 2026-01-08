@@ -1,3 +1,4 @@
 <h1>Custom Pipes in Angular</h1>
 
-<h3>{{amount | currency}} = {{amount | currencyConverter}}</h3>
+<h3>{{amount | currency}} = {{amount | currencyConverter | currency:'INR'}}</h3>
+<h3>{{amount | currency:'INR'}} = {{amount | currencyConverter:0.0095 | currency:'EUR'}}</h3>
