@@ -1,0 +1,5 @@
+<h1>Life Cycle Methods in Angular</h1>
+<button (click)="onUpdate()"> Update : {{count}}</button>
+<div *ngIf="count!=5">
+  <app-user [count]="count" #user></app-user>
+</div>
