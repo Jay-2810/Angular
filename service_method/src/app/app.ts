@@ -1,15 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, signal } from '@angular/core';
+
 import {Product} from './services/product'
 import { CustomAPI } from './custom-api/custom-api';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [CustomAPI],
+  imports: [CustomAPI,CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit{
   protected readonly title = signal('service_method');
   data:{
     name: string;
