@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Users } from '../services/users';
 import { User } from '../interfaces/user';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-custom-api',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './custom-api.html',
   styleUrl: './custom-api.css',
 })
