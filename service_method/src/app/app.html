@@ -1,0 +1,8 @@
+<h1>Services</h1>
+
+<button (click)="getProductData()">load data</button>
+
+@for(item of data;track item)
+{
+  <h3>{{item.name}}-{{item.company}}-{{item.price}}</h3>
+}
