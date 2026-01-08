@@ -15,9 +15,7 @@ export class App {
     company: string;
     price: string;
   }[] | undefined;
-  constructor(private productService:Product){
-
-  }
+  constructor(private productService:Product){}
   getProductData(){
     this.data=this.productService.sendData();
     console.log(this.data);
