@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Users } from '../services/users';
+import { User } from '../interfaces/user';
 
 @Component({
   selector: 'app-custom-api',
@@ -8,11 +9,11 @@ import { Users } from '../services/users';
   styleUrl: './custom-api.css',
 })
 export class CustomAPI {
-  users:any;
+  users:User[]=[];
   constructor(private userService:Users){}
   ngOnInit(){
-    this.userService.getUsers().subscribe((data:any)=>{
-      this.users=data;
+    this.userService.getUsers().subscribe((data:User[])=>{
+      this.users=data; 
       console.log(this.users);
     })
   }
