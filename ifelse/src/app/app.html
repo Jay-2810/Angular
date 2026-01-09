@@ -59,7 +59,7 @@
 <button class="white-button" (click)="handleColor('white')">Other</button>
 <br>
 <br>
-<input type="text" (input)="handleInput($event)" placeholder="Enter Color Name" />
+<input type="text" [(ngModel)]="color" (input)="handleInput($event)" placeholder="Enter Color Name" />
 <br>
 @switch (color) {
   @case('pink'){
