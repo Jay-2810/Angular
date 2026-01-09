@@ -20,6 +20,7 @@
     <li><strong>Name:</strong> {{item.name}}</li>
     <li><strong>Age:</strong> {{item.age}}</li>
     <li><strong>Email:</strong> {{item.email}}</li>
+    <li><button (click)="deleteUser(item.id)">delete</button></li>
   </ul>
 } @empty {
   <p>Loading users or no data found...</p>

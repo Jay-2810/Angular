@@ -38,8 +38,16 @@ export class App implements OnInit{
     const user=userForm.value;
     this.customService.postUser(user).subscribe((data:User)=>{
       console.log(data);
-      this.getUser();
+      if(data)
+        this.getUser();
       userForm.reset();
     });
+  }
+  deleteUser(id:string){
+    this.customService.deleteUser(id).subscribe((data:User)=>{
+      console.log(data);
+      if(data)
+        this.getUser();
+    })
   }
 }
