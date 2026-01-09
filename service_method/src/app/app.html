@@ -9,7 +9,7 @@
 
 
 <!-- Call predefine API -->
-@for(product of productList;track product.id)
+@for(product of productList();track product.id)
 {
   <ul>
     <li>{{product.title}}</li>

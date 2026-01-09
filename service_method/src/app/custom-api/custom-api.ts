@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,signal } from '@angular/core';
 import { Users } from '../services/users';
 import { User } from '../interfaces/user';
 import { CommonModule } from '@angular/common';
@@ -10,12 +10,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './custom-api.css',
 })
 export class CustomAPI implements OnInit {
-  users:User[]=[];
+  users=signal<User[]>([]);
   constructor(private userService:Users){}
   ngOnInit(){
-    this.userService.getUsers().subscribe((data:User[])=>{
-      this.users=data; 
-      console.log(this.users);
+    this.userService.getUsers().subscribe({
+      next:(data:User[])=>{
+        this.users.set(data);
+      },
+      error:(err)=>{
+        console.log("API Error",err);
+      }
     })
   }
 }

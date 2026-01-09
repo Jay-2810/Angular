@@ -22,11 +22,15 @@ export class App implements OnInit{
     this.data=this.productService.sendData();
     console.log(this.data);
   }
-  productList:any;
+  productList=signal<any[]>([]);
   ngOnInit(){
-    this.productService.getApi().subscribe((data:any)=>{
-      console.log(data);
-      this.productList=data.products;
+    this.productService.getApi().subscribe({
+      next:(items:any)=>{
+        this.productList.set(items.products);
+      },
+      error:(err)=>{
+        console.log('API Error',err);
+      }
     })
   }
 }

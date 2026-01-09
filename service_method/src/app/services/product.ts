@@ -17,6 +17,6 @@ export class Product {
   }
   getApi(){
     const url='https://dummyjson.com/products';
-    return this.http.get(url);
+    return this.http.get<any[]>(url);
   }
 }
