@@ -2,6 +2,19 @@
 
 <!-- <pre>{{ users() | json }}</pre> -->
 
+<form #userForm="ngForm" (ngSubmit)="addUser(userForm)" >
+  <div>
+    <input type="text" placeholder="Enter Your Name" name="name" ngModel>
+  </div>
+  <div>
+    <input type="text" placeholder="Enter Your Age" name="age" ngModel>
+  </div>
+  <div>
+    <input type="text" placeholder="Enter Your Email" name="email" ngModel>
+  </div>
+  <button >Add User</button>
+</form>
+<hr>
 @for(item of users(); track item.id) {
   <ul>
     <li><strong>Name:</strong> {{item.name}}</li>
