@@ -15,6 +15,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class App implements OnInit{
   protected readonly title = signal('api_call');
   users=signal<User[]>([]);
+  selectedUser=signal<User | undefined>(undefined);
   constructor(private customService:CustomApi){}
   ngOnInit() {
     this.getUser();
@@ -36,18 +37,34 @@ export class App implements OnInit{
   }
   addUser(userForm:NgForm){
     const user=userForm.value;
-    this.customService.postUser(user).subscribe((data:User)=>{
-      console.log(data);
-      if(data)
-        this.getUser();
-      userForm.reset();
-    });
+    if(!this.selectedUser()){
+      this.customService.postUser(user).subscribe((data:User)=>{
+        console.log(data);
+        if(data)
+          this.getUser();
+        userForm.reset();
+      })
+    } else{
+      const userData={...user,id:this.selectedUser()?.id};
+      this.customService.updateUser(userData).subscribe((data:User)=>{
+        if(data){
+          this.getUser();
+        }
+        this.selectedUser.set(undefined);
+      })
+    }
   }
   deleteUser(id:string){
     this.customService.deleteUser(id).subscribe((data:User)=>{
       console.log(data);
       if(data)
         this.getUser();
+    })
+  }
+  selectUser(id:string){
+    this.customService.getSelectedUser(id).subscribe((data:User)=>{
+      this.selectedUser.set(data);
+      console.log(data);
     })
   }
 }

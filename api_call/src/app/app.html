@@ -4,15 +4,15 @@
 
 <form #userForm="ngForm" (ngSubmit)="addUser(userForm)" >
   <div>
-    <input type="text" placeholder="Enter Your Name" name="name" ngModel>
+    <input type="text" placeholder="Enter Your Name" name="name" [ngModel]="selectedUser()?.name">
   </div>
   <div>
-    <input type="text" placeholder="Enter Your Age" name="age" ngModel>
+    <input type="text" placeholder="Enter Your Age" name="age" [ngModel]="selectedUser()?.age">
   </div>
   <div>
-    <input type="text" placeholder="Enter Your Email" name="email" ngModel>
+    <input type="text" placeholder="Enter Your Email" name="email" [ngModel]="selectedUser()?.email">
   </div>
-  <button >Add User</button>
+  <button class="add" >{{!selectedUser()?"Add User":"Update User"}}</button>
 </form>
 <hr>
 @for(item of users(); track item.id) {
@@ -20,7 +20,7 @@
     <li><strong>Name:</strong> {{item.name}}</li>
     <li><strong>Age:</strong> {{item.age}}</li>
     <li><strong>Email:</strong> {{item.email}}</li>
-    <li><button (click)="deleteUser(item.id)">delete</button></li>
+    <li><button (click)="deleteUser(item.id)">delete</button> <button (click)="selectUser(item.id)">update</button></li>
   </ul>
 } @empty {
   <p>Loading users or no data found...</p>

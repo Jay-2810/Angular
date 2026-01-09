@@ -1,6 +1,10 @@
 div{
     margin-top: 10px;
 }
-button{
+.add{
     margin-top: 10px;
+}
+
+button{
+    margin-right: 5px;
 }
