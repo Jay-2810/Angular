@@ -1,5 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { CustomApi } from './services/custom-api';
 import { User } from './interfaces/user';
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
